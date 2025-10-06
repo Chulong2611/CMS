@@ -817,3 +817,10 @@ function twentytwenty_get_elements_array() {
 	 */
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+//theme add fontawesome7
+function add_fontawesome7_to_theme() {
+    wp_enqueue_style( 'font-awesome-7', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'add_fontawesome7_to_theme' );
+
