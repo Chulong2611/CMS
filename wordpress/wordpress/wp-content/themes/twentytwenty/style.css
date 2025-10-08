@@ -2405,9 +2405,9 @@ body:not(.singular) main>article:first-of-type {
 
 /* Search Results ---------------------------- */
 
-.no-search-results-form {
+/* .no-search-results-form {
 	padding-top: 5rem;
-}
+} */
 
 
 /* -------------------------------------------------------------------------- */
@@ -5172,10 +5172,10 @@ a.to-the-top>* {
 	}
 
 	/* SEARCH RESULTS */
-
+/* 
 	.no-search-results-form {
 		padding-top: 8rem;
-	}
+	} */
 
 	/* Post: Single -------------------------- */
 

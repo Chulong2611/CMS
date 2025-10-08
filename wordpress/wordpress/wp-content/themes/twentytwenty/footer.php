@@ -22,10 +22,6 @@
 				<h5>CMS</h5>
 				<ul class="list-unstyled quick-links">
 					<li><a href="http://localhost:8080/"><i class="fa fa-angle-double-right"></i>Trang chủ</a></li>
-					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>haha</a></li>
-					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-4">
