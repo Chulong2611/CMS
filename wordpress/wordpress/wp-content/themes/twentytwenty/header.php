@@ -182,7 +182,7 @@
 				?>
 
 			</div><!-- .header-navigation-wrapper -->
-			<div class="account">
+			<!-- <div class="account">
 				<i class="fa-solid fa-user-circle"></i>
 				Account
 				<i class="fa-solid fa-chevron-down"></i>
@@ -191,7 +191,27 @@
 					<a href="#">Register</a>
 					<a href="#">Logout</a>
 				</div>
+			</div> -->
+			<div class="account">
+				<i class="fa fa-user-circle"></i>
+				<?php if (is_user_logged_in()) :
+					$current_user = wp_get_current_user();
+				?>
+					<span><?php echo esc_html($current_user->display_name); ?> <i class="fa fa-chevron-down"></i></span>
+					<div class="account-dropdown">
+						<a href="<?php echo esc_url(admin_url()); ?>">Trang quản trị</a>
+						<a href="<?php echo esc_url(get_edit_user_link()); ?>">Hồ sơ</a>
+						<a href="<?php echo esc_url(wp_logout_url(home_url())); ?>">Đăng xuất</a>
+					</div>
+				<?php else : ?>
+					<span>Account <i class="fa fa-chevron-down"></i></span>
+					<div class="account-dropdown">
+						<a href="<?php echo esc_url(wp_login_url()); ?>">Đăng nhập</a>
+						<a href="<?php echo esc_url(wp_registration_url()); ?>">Đăng ký</a>
+					</div>
+				<?php endif; ?>
 			</div>
+
 
 
 		</div><!-- .header-inner -->
@@ -259,7 +279,7 @@
 			font-weight: 500;
 			transition: color 0.3s ease;
 			min-width: 70px;
-			height: 60px;
+			margin-top: 20px;
 		}
 
 		.account:hover {
