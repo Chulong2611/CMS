@@ -865,6 +865,30 @@ function custom_submit_comment_callback() {
     }
 }
 
+// Khai báo 2 sidebar cho trang detail
+function mytheme_register_sidebars() {
+    register_sidebar([
+        'name'          => 'Categories Sidebar',
+        'id'            => 'sidebar-categories',
+        'description'   => 'Hiển thị danh mục bài viết ở bên trái trang chi tiết',
+        'before_widget' => '<div class="widget widget-categories">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ]);
+
+    register_sidebar([
+        'name'          => 'Recent Post Sidebar',
+        'id'            => 'sidebar-recent',
+        'description'   => 'Hiển thị bài viết mới ở bên phải trang chi tiết',
+        'before_widget' => '<div class="widget widget-recent">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ]);
+}
+add_action('widgets_init', 'mytheme_register_sidebars');
+
 
 
 
